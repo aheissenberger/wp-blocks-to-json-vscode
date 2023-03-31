@@ -1,4 +1,4 @@
-# Wordpress Block HTML Parser to JSON
+# Wordpress Gutenberg HTML Block parse/serialize JSON
 
 Convert a selected text area with Wordpress Gutenberg HTML Blocks to/from JSON.
 If the selected text is empty it will take the content of the clipboard an inserts at the current cursor position.
@@ -173,7 +173,7 @@ Calling out known issues can help limit users opening duplicate issues against y
 ## Resources used
 
 - Parsing [@wordpress/block-serialization-default-parser](https://github.com/WordPress/gutenberg/blob/f70ecc57761dbafa4df6b4953be78d59a7841d57/packages/block-serialization-spec-parser/README.md)
-- Serialize [@wordpress/blocks](https://github.com/WordPress/gutenberg) - manuel extraction of relevant code parts
+- Serialize [@wordpress/blocks](https://github.com/WordPress/gutenberg) - manuel extraction of relevant code parts as the full library would need a browser environment
 
 ## Out of Scope requirements
 
