@@ -13,25 +13,25 @@ If the selected text is empty it will take the content of the clipboard an inser
 
 ## Release Notes
 
-see [Changelog](https://github.com/aheissenberger/wp-blocks-to-json-vscode/raw/main/CHANGELOG.md)
+see [Changelog](https://github.com/aheissenberger/wp-blocks-to-json-vscode/raw/master/CHANGELOG.md)
 
 ## Preview
 
 **JSON to HTML blocks:**
 
 <p align="center">
-  <img src="https://github.com/aheissenberger/wp-blocks-to-json-vscode/raw/main/docs/preview-json2html.gif" alt="preview">
+  <img src="https://github.com/aheissenberger/wp-blocks-to-json-vscode/raw/master/docs/preview-json2html.gif" alt="preview">
 </p>
 ![preview](docs/preview-json2html.gif)
 
 **HTML blocks to JSON:**
 
 <p align="center">
-  <img src="https://github.com/aheissenberger/wp-blocks-to-json-vscode/raw/main/docs/preview-html2json.gif" alt="preview">
+  <img src="https://github.com/aheissenberger/wp-blocks-to-json-vscode/raw/master/docs/preview-html2json.gif" alt="preview">
 </p>
 ![preview](docs/preview-html2json.gif)
 
-### Command `JSON to PHP Array`
+### Command `WP Blocks HTML from JSON`
 
 **from JSON:**
 
@@ -53,9 +53,7 @@ see [Changelog](https://github.com/aheissenberger/wp-blocks-to-json-vscode/raw/m
 <!-- /wp:paragraph -->
 ```
 
-### Command `JS Object/Array to PHP Array`
-
-supports Javascript Sparse Arrays
+### Command `WP Blocks HTML to JSON`
 
 **from Javascript Object/Array:**
 
@@ -172,6 +170,11 @@ This extension contributes the following settings:
 Calling out known issues can help limit users opening duplicate issues against your extension.
 -->
 
+## Resources used
+
+- Parsing [@wordpress/block-serialization-default-parser](https://github.com/WordPress/gutenberg/blob/f70ecc57761dbafa4df6b4953be78d59a7841d57/packages/block-serialization-spec-parser/README.md)
+- Serialize [@wordpress/blocks](https://github.com/WordPress/gutenberg) - manuel extraction of relevant code parts
+
 ## Out of Scope requirements
 
 This is a list of features which are not planed to implement:
@@ -181,4 +184,4 @@ This is a list of features which are not planed to implement:
 
 ## Licence
 
-[BSD 2 Clause](https://github.com/aheissenberger/wp-blocks-to-json-vscode/raw/main/LICENSE.txt)
+[BSD 2 Clause](https://github.com/aheissenberger/wp-blocks-to-json-vscode/raw/master/LICENSE.txt)
