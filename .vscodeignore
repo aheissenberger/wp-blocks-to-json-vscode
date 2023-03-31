@@ -1,0 +1,16 @@
+.vscode/**
+.vscode-test/**
+test/**
+.gitignore
+.yarnrc
+*.code-workspace
+yarn.lock
+vsc-extension-quickstart.md
+**/jsconfig.json
+**/*.map
+**/.eslintrc.json
+assets/**
+docs/preview.gif
+src/**
+node_modules/**
+dist/extension.js.map
