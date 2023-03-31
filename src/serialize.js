@@ -1,3 +1,4 @@
+// extracted from `node_modules/@wordpress/blocks/src/api/serializer.js`
 
 /**
  * Returns the content of a block, including comment delimiters.
@@ -36,6 +37,34 @@ export function getCommentDelimitedContent(
     );
 }
 
+/**
+ * Given an attributes object, returns a string in the serialized attributes
+ * format prepared for post content.
+ *
+ * @param {Object} attributes Attributes object.
+ *
+ * @return {string} Serialized attributes.
+ */
+export function serializeAttributes(attributes) {
+    return (
+        JSON.stringify(attributes)
+            // Don't break HTML comments.
+            .replace(/--/g, '\\u002d\\u002d')
+
+            // Don't break non-standard-compliant tools.
+            .replace(/</g, '\\u003c')
+            .replace(/>/g, '\\u003e')
+            .replace(/&/g, '\\u0026')
+
+            // Bypass server stripslashes behavior which would unescape stringify's
+            // escaping of quotation mark.
+            //
+            // See: https://developer.wordpress.org/reference/functions/wp_kses_stripslashes/
+            .replace(/\\"/g, '\\u0022')
+    );
+}
+
+// extracted from `node_modules/@wordpress/blocks/src/api/parser/serialize-raw-block.js`
 
 /**
  * @typedef {Object}   Options                   Serialization options.
@@ -91,32 +120,7 @@ export function serializeRawBlock(rawBlock, options = {}) {
 }
 
 
-/**
- * Given an attributes object, returns a string in the serialized attributes
- * format prepared for post content.
- *
- * @param {Object} attributes Attributes object.
- *
- * @return {string} Serialized attributes.
- */
-export function serializeAttributes(attributes) {
-    return (
-        JSON.stringify(attributes)
-            // Don't break HTML comments.
-            .replace(/--/g, '\\u002d\\u002d')
-
-            // Don't break non-standard-compliant tools.
-            .replace(/</g, '\\u003c')
-            .replace(/>/g, '\\u003e')
-            .replace(/&/g, '\\u0026')
-
-            // Bypass server stripslashes behavior which would unescape stringify's
-            // escaping of quotation mark.
-            //
-            // See: https://developer.wordpress.org/reference/functions/wp_kses_stripslashes/
-            .replace(/\\"/g, '\\u0022')
-    );
-}
+// modified to use `serializeRawBlock`
 
 /**
  * Takes a block or set of blocks and returns the serialized post content.
