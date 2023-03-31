@@ -11,3 +11,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ### Added
 
 - Initial release
+
+## [0.0.2] - 2023-03-31
+
+### Fixed
+
+- README.md typos

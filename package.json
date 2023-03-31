@@ -3,7 +3,7 @@
   "displayName": "Wordpress Gutenberg HTML Block parse/serialize JSON",
   "description": "Convert PHP Array from/to JSON or JavaScript from text selection or clipboard.",
   "icon": "icon.png",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "heissenbergerlab",
   "license": "bsd-2-clause",
   "homepage": "https://github.com/aheissenberger/wp-blocks-to-json-vscode",
@@ -14,6 +14,8 @@
   "keywords": [
     "wp",
     "wordpress",
+    "gutenberg",
+    "blocks",
     "json",
     "converter",
     "parser",
@@ -28,11 +30,11 @@
     "commands": [
       {
         "command": "wp-blocks-to-json.toJSON",
-        "title": "WP Blocks HTML to JSON Array"
+        "title": "WP Blocks HTML to JSON"
       },
       {
         "command": "wp-blocks-to-json.fromJSON",
-        "title": "WP Blocks HTML from JSON Array"
+        "title": "WP Blocks HTML from JSON"
       }
     ]
   },
